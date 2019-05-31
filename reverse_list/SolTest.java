@@ -6,6 +6,8 @@ import org.junit.Test;
 
 public class SolTest {
     ListNode head = null;
+    Solution solution = new Solution();
+
     @Before
     public void setUp(){
         ListNode tmp = null;
@@ -18,8 +20,18 @@ public class SolTest {
 
     @Test
     public void reverseListTest(){
-        Solution solution = new Solution();
         ListNode result = solution.reverseList(head);
+        int i = 5;
+        while (result != null){
+            Assert.assertEquals(i, result.val);
+            result = result.next;
+            i--;
+        }
+    }
+
+    @Test
+    public void recursiveReverseListTest(){
+        ListNode result = solution.recursiveReverseList(head);
         int i = 5;
         while (result != null){
             Assert.assertEquals(i, result.val);
