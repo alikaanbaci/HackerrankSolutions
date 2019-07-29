@@ -17,7 +17,6 @@ class Solution {
                 else{
                     previousRow = triangle.get(i-1);
                     row.add(previousRow.get(j-1) + previousRow.get(j));
-
                 }
             }
             triangle.add(row);
